@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+
+@mixin warning {
+  background-color: orange;
+  color: #fff;
+}
+@mixin large-font {
+  font: {
+    size: 22px;
+    weight: bold;
+  }
+}
+
+@mixin rounded {
+  border-radius:6px;
+}
+@mixin box {
+  @include rounded;
+border:1px solid darkgray
+}
+
+body {
+  font-family: sans-serif;
+  color: $text-color;
+}
+.warning-button {
+  @include warning;
+  padding: 8px 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headline-font;
+}
+h2 {
+@include large-font;
+}
+p {
+  font-family: $text-font;
+}
+
+a {
+  color: $link-color;
+}
+
+#header {
+@include box;
+  height: $header-height;
+  background-color: $theme-color;
+  #main-menu {
+    a {
+      color: $menu-item-color;
+    }
+  }
+
+  #logo {
+  }
+}
+
+#main {
+  #content {
+    @include box;
+
+  }
+
+  #sidebar {
+  }
+}
+
+#footer {
+  height: $footer-height;
+}
