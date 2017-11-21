@@ -1,14 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "partials/variables";
 @import "partials/mixins";
+@import "partials/function";
+
+@include google-font("Titillium-Web");
 
 body {
   font-family: sans-serif;
   color: $text-color;
+  @include large-screens {
+    font-size:155%;
+  }
 }
 .warning-button {
   @include warning;
   padding: 8px 10px;
+  &:hover {
+    color: lighten( $link-color,  15%);
+    }
 }
 
 h1,
@@ -16,6 +25,8 @@ h2,
 h3,
 h4 {
   font-family: $headline-font;
+  font-size:em(25px);
+
 }
 h2 {
 @include large-font;
@@ -26,6 +37,9 @@ p {
 
 a {
   color: $link-color;
+  &:hover {
+    color: darken( $link-color,  15%);
+  }
 }
 
 #header {

@@ -1,3 +1,34 @@
+
+@mixin tiny-screens() {
+    @media only screens and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-screens() {
+  @media only screens and (max-width: 480px) {
+      @content;
+  }
+}
+
+@mixin medium-screens() {
+  @media only screens and (max-width: 680px) {
+      @content;
+  }
+}
+
+
+@mixin large-screens() {
+  @media only screens and (max-width: 960px) {
+      @content;
+  }
+}
+
+@mixin google-font($font) {
+    $font:unquote("$font");
+    @import url(https://fonts.googleapis.com/css?family=#{$font});
+}
+
 @mixin warning {
   background-color: orange;
   color: #fff;
