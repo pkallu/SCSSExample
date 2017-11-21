@@ -1,24 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "variables";
-
-@mixin warning {
-  background-color: orange;
-  color: #fff;
-}
-@mixin large-font {
-  font: {
-    size: 22px;
-    weight: bold;
-  }
-}
-
-@mixin rounded {
-  border-radius:6px;
-}
-@mixin box {
-  @include rounded;
-border:1px solid darkgray
-}
+@import "partials/variables";
+@import "partials/mixins";
 
 body {
   font-family: sans-serif;

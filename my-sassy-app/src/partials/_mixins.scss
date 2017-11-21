@@ -1,0 +1,18 @@
+@mixin warning {
+  background-color: orange;
+  color: #fff;
+}
+@mixin large-font {
+  font: {
+    size: 22px;
+    weight: bold;
+  }
+}
+
+@mixin rounded($raduis:6px) {
+  border-radius:$raduis;
+}
+@mixin box {
+  @include rounded($raduis: 5px);
+  border:1px solid darkgray
+}
